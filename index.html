@@ -8,9 +8,8 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <title>La Previa Hub - Edición Córdoba</title>
     
-    <!-- PWA Manifest -->
-    <link rel="manifest" href="manifest.json" />
-    <link rel="apple-touch-icon" href="https://cdn-icons-png.flaticon.com/512/3409/3409608.png">
+    <!-- PWA - manifest generado por vite-plugin-pwa -->
+    <link rel="apple-touch-icon" href="/icon-512.png">
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -87,23 +86,10 @@
   }
 }
 </script>
-<link rel="stylesheet" href="/index.css">
 </head>
   <body>
     <div id="root"></div>
-    <script>
-      if ('serviceWorker' in navigator) {
-        window.addEventListener('load', () => {
-          navigator.serviceWorker.register('./sw.js')
-            .then(registration => {
-              console.log('SW registrado che culiau:', registration);
-            })
-            .catch(error => {
-              console.log('Fallo el SW, que moco:', error);
-            });
-        });
-      }
-    </script>
+    <!-- Service worker registrado automáticamente por vite-plugin-pwa -->
   <script type="module" src="/index.tsx"></script>
 </body>
 </html>
