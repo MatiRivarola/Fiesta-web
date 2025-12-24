@@ -7,10 +7,10 @@ import { playSound } from '../../utils/audio';
 import { getAvailableItems, markItemAsSeen } from '../../utils/storage';
 
 const CATEGORIES: { id: RouletteCategory; label: string; color: string }[] = [
-  { id: 'ICEBREAKER', label: 'Suave', color: 'text-neon-cyan' },
-  { id: 'HOT', label: 'Caliente', color: 'text-neon-pink' },
+  { id: 'ICEBREAKER', label: 'Tranca', color: 'text-neon-cyan' },
+  { id: 'HOT', label: 'Picante', color: 'text-neon-pink' },
   { id: 'TOXIC', label: 'Tóxico', color: 'text-neon-green' },
-  { id: 'ABSURD', label: 'Ridículo', color: 'text-neon-yellow' },
+  { id: 'ABSURD', label: 'Bizarro', color: 'text-neon-yellow' },
 ];
 
 export const ToxicRoulette: React.FC = () => {
@@ -71,9 +71,9 @@ export const ToxicRoulette: React.FC = () => {
       <div className="flex flex-col h-full space-y-4 animate-fade-in font-sans">
         <div className="text-center">
           <h2 className="text-3xl font-black text-neon-pink uppercase tracking-widest flex justify-center items-center gap-2 font-display">
-            <Users /> Jugadores
+            <Users /> Los Pibes
           </h2>
-          <p className="text-gray-400 text-xs mt-1">Agrega a las víctimas (Mínimo 2)</p>
+          <p className="text-gray-400 text-xs mt-1">Sumá a la gilada (Mínimo 2)</p>
         </div>
 
         {/* Category Selector */}
@@ -98,7 +98,7 @@ export const ToxicRoulette: React.FC = () => {
             value={inputValue}
             onChange={(e) => setInputValue(e.target.value)}
             onKeyDown={(e) => e.key === 'Enter' && addPlayer()}
-            placeholder="Nombre..."
+            placeholder="Nombre del culiau..."
             className="flex-1 bg-dark-card border border-gray-700 text-white p-4 rounded-xl focus:border-neon-pink focus:outline-none transition-colors"
           />
           <NeonButton onClick={addPlayer} variant="cyan" className="!px-4">+</NeonButton>
@@ -125,7 +125,7 @@ export const ToxicRoulette: React.FC = () => {
             disabled={players.length < 2}
             variant={players.length < 2 ? 'cyan' : 'pink'}
           >
-            {players.length < 2 ? 'Faltan Jugadores' : '¡GIRAR!'}
+            {players.length < 2 ? 'Faltan jugadores che' : '¡DALE MECHA!'}
           </NeonButton>
         </div>
       </div>
@@ -136,7 +136,7 @@ export const ToxicRoulette: React.FC = () => {
     return (
       <div className="flex flex-col items-center justify-center h-full space-y-8">
         <div className="w-40 h-40 border-8 border-t-neon-pink border-r-neon-purple border-b-neon-cyan border-l-neon-green rounded-full animate-spin shadow-[0_0_50px_rgba(255,0,255,0.5)]" />
-        <h2 className="text-3xl font-bold animate-pulse text-white font-display">Eligiendo...</h2>
+        <h2 className="text-3xl font-bold animate-pulse text-white font-display">Buscando víctima...</h2>
       </div>
     );
   }
@@ -153,7 +153,7 @@ export const ToxicRoulette: React.FC = () => {
 
         <div className="bg-gradient-to-r from-purple-900 to-pink-900 p-1 rounded-2xl w-full transform transition-all hover:scale-105 shadow-2xl">
           <div className="bg-black p-8 rounded-xl border border-neon-pink/30">
-            <p className="text-sm text-gray-400 uppercase tracking-widest mb-2 font-display">La víctima es</p>
+            <p className="text-sm text-gray-400 uppercase tracking-widest mb-2 font-display">Le tocó a</p>
             <h1 className="text-5xl md:text-6xl font-black text-white truncate drop-shadow-[0_0_15px_rgba(255,255,255,0.5)] font-display">
                 {currentResult?.player.name}
             </h1>
@@ -175,7 +175,7 @@ export const ToxicRoulette: React.FC = () => {
           onClick={() => handleAction('done')}
           className="flex items-center justify-center gap-2"
         >
-          <CheckCircle className="w-6 h-6" /> Cumplido
+          <CheckCircle className="w-6 h-6" /> De una, hecho
         </NeonButton>
         <NeonButton 
           fullWidth 
@@ -183,7 +183,7 @@ export const ToxicRoulette: React.FC = () => {
           onClick={() => handleAction('fail')}
           className="flex items-center justify-center gap-2 opacity-90"
         >
-          <XCircle className="w-6 h-6" /> Gallina (BEBE)
+          <XCircle className="w-6 h-6" /> Arrugué (CHUPÁ)
         </NeonButton>
       </div>
     </div>

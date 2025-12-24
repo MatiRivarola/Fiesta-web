@@ -6,11 +6,11 @@ import { getAvailableItems, markItemAsSeen } from '../../utils/storage';
 import { playSound } from '../../utils/audio';
 
 const MODES: { id: NeverEverCategory; label: string; color: string }[] = [
-    { id: 'PARTY', label: 'Fiesta', color: 'text-neon-cyan' },
-    { id: 'DIRTY', label: '+18', color: 'text-neon-pink' },
-    { id: 'GROSS', label: 'Vergüenza', color: 'text-neon-green' },
-    { id: 'COUPLES', label: 'Parejas', color: 'text-neon-purple' },
-    { id: 'HARDCORE', label: 'Extremo', color: 'text-red-500' },
+    { id: 'PARTY', label: 'De Gira', color: 'text-neon-cyan' },
+    { id: 'DIRTY', label: 'Zarpado', color: 'text-neon-pink' },
+    { id: 'GROSS', label: 'Rancio', color: 'text-neon-green' },
+    { id: 'COUPLES', label: 'Pollerudos', color: 'text-neon-purple' },
+    { id: 'HARDCORE', label: 'Turbina', color: 'text-red-500' },
 ];
 
 export const NeverHaveIEver: React.FC = () => {
@@ -47,9 +47,9 @@ export const NeverHaveIEver: React.FC = () => {
       return (
           <div className="flex flex-col h-full justify-center items-center gap-6 animate-fade-in font-display">
               <h2 className="text-3xl font-black text-white uppercase tracking-widest text-center">
-                  Elige un Modo
+                  Elegí el Modo
               </h2>
-              <div className="grid grid-cols-2 gap-4 w-full">
+              <div className="grid grid-cols-2 gap-4 w-full px-4">
                   {MODES.map(m => (
                       <button 
                         key={m.id}
@@ -100,7 +100,7 @@ export const NeverHaveIEver: React.FC = () => {
       </div>
       
       <p className="mt-8 text-gray-400 animate-pulse flex items-center gap-2 font-display text-sm">
-        Toca para pasar <ChevronRight size={16} />
+        Tocá para pasar <ChevronRight size={16} />
       </p>
 
       <button 

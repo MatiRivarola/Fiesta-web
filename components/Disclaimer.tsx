@@ -16,19 +16,19 @@ export const Disclaimer: React.FC<{ onAccept: () => void }> = ({ onAccept }) => 
           <AlertTriangle className="w-20 h-20 text-neon-pink animate-pulse" />
         </div>
         
-        <h1 className="text-4xl font-black text-white uppercase">Advertencia</h1>
+        <h1 className="text-4xl font-black text-white uppercase font-display">Ojo al piojo</h1>
         
         <div className="bg-gray-900 p-6 rounded-xl border border-gray-800 shadow-2xl">
-          <p className="text-lg text-gray-300 mb-4 leading-relaxed">
-            Este juego contiene temas para adultos, humor negro y referencias al alcohol.
+          <p className="text-lg text-gray-300 mb-4 leading-relaxed font-sans">
+            Che, esto tiene cosas turbias, puteadas y mucho escabio.
           </p>
-          <p className="text-xl font-bold text-neon-cyan border-t border-gray-700 pt-4 mt-4">
-            Bebe con responsabilidad. <br/>Solo +18 años.
+          <p className="text-xl font-bold text-neon-cyan border-t border-gray-700 pt-4 mt-4 font-display">
+            Chupá con responsabilidad.<br/>Si sos menor tomatelá (+18).
           </p>
         </div>
 
         <NeonButton fullWidth onClick={handleAccept} variant="pink">
-          ENTENDIDO, VAMOS
+          DALE, SOY GRANDE
         </NeonButton>
       </div>
     </div>

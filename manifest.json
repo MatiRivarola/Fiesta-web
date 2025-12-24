@@ -1,0 +1,16 @@
+{
+  "name": "La Previa Hub - Córdoba",
+  "short_name": "PreviaHub",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#050505",
+  "theme_color": "#000000",
+  "description": "Juegos de fiesta estilo cordobés para la previa.",
+  "icons": [
+    {
+      "src": "https://cdn-icons-png.flaticon.com/512/3409/3409608.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

@@ -49,7 +49,7 @@ export const InfoModal: React.FC<InfoModalProps> = ({
         </h2>
 
         <div className="space-y-4 mb-8">
-          <h3 className="text-white font-bold text-lg font-display">Cómo jugar:</h3>
+          <h3 className="text-white font-bold text-lg font-display">Cómo se juega, pichón:</h3>
           <ul className="space-y-3">
             {instructions.map((step, index) => (
               <li key={index} className="flex gap-3 text-gray-300 font-sans leading-relaxed text-sm md:text-base">
@@ -61,7 +61,7 @@ export const InfoModal: React.FC<InfoModalProps> = ({
         </div>
 
         <NeonButton fullWidth onClick={handleClose} variant="pink" className="text-sm">
-          ENTENDIDO
+          JOYIA, ENTENDÍ
         </NeonButton>
       </div>
     </div>

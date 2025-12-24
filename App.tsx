@@ -8,36 +8,37 @@ import { ToxicRoulette } from './components/games/ToxicRoulette';
 import { TheBomb } from './components/games/TheBomb';
 import { NeverHaveIEver } from './components/games/NeverHaveIEver';
 import { TheCourt } from './components/games/TheCourt';
+import { InstallPrompt } from './components/InstallPrompt';
 import { playSound } from './utils/audio';
 
 const INSTRUCTIONS = {
   ROULETTE: [
-    "Ingresa los nombres de todos los jugadores.",
-    "Elige una categoría: Suave, Caliente, Tóxica o Absurda.",
-    "Pulsa 'GIRAR' y reza. La app elegirá una víctima y un reto al azar.",
-    "Si cumples el reto, pulsa 'Cumplido'.",
-    "Si te niegas, pulsa 'Gallina' y bebe como castigo."
+    "Anotá el nombre de todos los culiau.",
+    "Elegí qué tan picante la querés: Tranca, Picante, Tóxico o Bizarro.",
+    "Apretá 'DALE MECHA'. La app agarra a uno de punto.",
+    "Si te bancás el reto, joya.",
+    "Si arrugás, sos gallina y te clavás un trago."
   ],
   BOMB: [
-    "Formad un círculo.",
-    "Dale a 'Encender'. Aparecerá una sílaba (ej: PRO) o un tema.",
-    "Di una palabra válida y pulsa el botón 'PASAR' rápidamente.",
-    "Pásale el móvil al de tu derecha.",
-    "El tiempo es aleatorio. Si explota en tu mano... ¡BEBES!"
+    "Hagan una ronda, no sean ortivas.",
+    "Dale a 'Prendé la mecha'. Te tira una sílaba o un tema.",
+    "Decí algo que sirva y apretá 'PASÁ CULIAU' al toque.",
+    "Pasale el fardo al de la derecha.",
+    "Si explota y lo tenés vos... ¡FONDO BLANCO!"
   ],
   NEVER_EVER: [
-    "Elige el modo de juego (Fiesta, +18, Parejas, etc.).",
-    "Lee la tarjeta en voz alta.",
-    "Si tú has hecho lo que dice la tarjeta, debes beber.",
-    "Toca la pantalla para pasar a la siguiente confesión.",
-    "Prepárate para descubrir los secretos de tus amigos."
+    "Elegí el modo (De Gira, Zarpado, Rancio, Pollerudos, etc.).",
+    "Leé la tarjeta para todos.",
+    "Si hiciste lo que dice, chupá.",
+    "Tocá la pantalla para la siguiente.",
+    "Preparate para quemarte solo."
   ],
   COURT: [
-    "Aparecerá una pregunta polémica (ej: ¿Quién iría preso?).",
-    "Alguien pulsa 'Iniciar cuenta atrás'.",
-    "Al terminar la cuenta (3, 2, 1...), todos debéis señalar a una persona a la vez.",
-    "La persona más señalada es declarada CULPABLE y debe beber.",
-    "Discutid por qué habéis elegido a esa persona."
+    "Sale una pregunta bardo (ej: ¿Quién va en cana?).",
+    "Uno le manda a la cuenta atrás.",
+    "Cuando termina (3, 2, 1...), todos señalan con el dedo al mismo tiempo.",
+    "El más señalado pierde y chupa.",
+    "Bardeen un rato de por qué lo eligieron."
   ]
 };
 
@@ -81,6 +82,8 @@ const App: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-dark-bg text-white font-sans selection:bg-neon-pink selection:text-white pb-safe">
+      <InstallPrompt />
+      
       <InfoModal 
         isOpen={modal.isOpen}
         onClose={() => setModal({ ...modal, isOpen: false })}
@@ -104,7 +107,7 @@ const App: React.FC = () => {
         )}
         
         <h1 className="text-xl font-black italic tracking-tighter text-transparent bg-clip-text bg-gradient-to-r from-neon-pink to-neon-cyan flex items-center gap-2 font-display">
-           <Zap className="text-neon-green w-5 h-5 fill-current animate-pulse" /> FIESTA HUB
+           <Zap className="text-neon-green w-5 h-5 fill-current animate-pulse" /> PREVIA HUB
         </h1>
 
         <div className="w-8"></div>
@@ -116,7 +119,7 @@ const App: React.FC = () => {
           <div className="space-y-4 animate-fade-in pb-10">
             <GameCard 
               title="Ruleta Tóxica" 
-              description="Verdades incómodas, retos y caos social."
+              description="Verdades, retos y quilombo asegurado."
               icon={Skull}
               accentColor="#ff00ff"
               colorName="pink"
@@ -125,7 +128,7 @@ const App: React.FC = () => {
             />
             <GameCard 
               title="La Bomba +18" 
-              description="Piensa rápido o bebe. Tic, tac... ¡BOOM!"
+              description="Pensá rápido o chupá. Tic, tac... ¡BOOM!"
               icon={Bomb}
               accentColor="#39ff14"
               colorName="green"
@@ -134,7 +137,7 @@ const App: React.FC = () => {
             />
             <GameCard 
               title="Yo Nunca Picante" 
-              description="Confesiones, salseo y modos +18."
+              description="Confesiones turbias y salseo cordobés."
               icon={Beer}
               accentColor="#b026ff"
               colorName="purple"
@@ -143,7 +146,7 @@ const App: React.FC = () => {
             />
             <GameCard 
               title="El Tribunal" 
-              description="Juzga a tus amigos. Cuenta atrás y... ¡SEÑALEN!"
+              description="Juzgá a la gilada. Cuenta atrás y... ¡ESCRACHADO!"
               icon={Gavel}
               accentColor="#00ffff"
               colorName="cyan"
@@ -152,7 +155,7 @@ const App: React.FC = () => {
             />
             
             <div className="pt-8 text-center opacity-30 text-xs">
-              <p>Fiesta Hub v2.1 • Mobile Party Experience</p>
+              <p>Hecho en Córdoba capital • Edición Ferne'</p>
             </div>
           </div>
         ) : (
