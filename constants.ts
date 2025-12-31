@@ -42,18 +42,21 @@ const ROULETTE_ICEBREAKER: RouletteTask[] = Array.from({ length: 100 }, (_, i) =
 const ROULETTE_HOT: RouletteTask[] = Array.from({ length: 70 }, (_, i) => ({
   id: id('r_hot', i), category: 'HOT', type: i % 2 === 0 ? 'truth' : 'dare',
   text: [
-    "Chupón en el cuello al de la derecha.", "Sacate una prenda, hace calor culiau.", "¿Posición favorita para el delicioso?", "Baile hot a quien elijas.", "¿Hiciste un trío o te gustaría?",
-    "Que te peguen un chirlo en la cola.", "¿Qué ropa interior tenés? Mostrá el elástico.", "Mordele el labio al de la izquierda.", "Lugar más rari donde pusistela.", "Simulá un pete con una botella.",
-    "¿Garchaste en el laburo?", "Que te escriban algo en la panza.", "¿A quién le das de acá?", "Comé algo de la boca de otro, asqueroso.", "Gemí el nombre de alguien de la ronda.",
-    "¿Tamaño o que se mueva bien?", "Decile una cochinada al oído al de al lado.", "¿Te pescaron acogotando la gallina?", "Masaje de hombros 1 min, ponele onda.", "¿Te grabaste cogiendo?",
-    "Tomate un shot del ombligo de alguien.", "Tu fetiche más oscuro.", "Chapate a alguien.", "¿Pagaste por sexo, pirata?", "Mano abajo de la remera, un toque nomás.",
-    "¿Le diste a alguien de esta pieza?", "¿Escupís o tragás?", "Sentate a upa de alguien 2 rondas.", "Juguete sexual favorito.", "Tu mejor polvo.",
-    "Hielo en el escote/pantalo.", "¿Fuiste infiel? Tomá por gato.", "Cambiá remera con alguien.", "¿Qué te calienta más?", "Beso de esquimal, tierno.",
-    "¿Mandaste nudes esta semana?", "Hacé ruidos de placer.", "¿Le tenés ganas a la pareja de un amigo?", "Lengüetazo en el cuello.", "¿Dudaste de tu sexualidad?",
-    "Que te den un beso donde quieran.", "¿El 'sin esquinas' (anal)?", "Describí la ropa interior del de enfrente.", "Si no tenés ropa interior, fondo.", "¿Arriba o abajo?",
-    "Twerkeá 15 segundos contra la pared.", "¿Luz prendida o a oscuras?", "¿Mañanero o de noche?", "Qué te gusta del cuerpo del de la derecha.", "Pico seco a alguien.",
-    "Mostrá una foto hot tuya (censurada si querés).", "¿Fantasía que te falta cumplir?", "Besale la oreja a alguien.", "Chupale el dedo a alguien.", "Dejá que te huelan el cuello.",
-    "¿Garchaste en la primera cita?", "¿En un lugar público?", "Beso de a 3.", "Si te comiste a más de 10, tomá.", "Decí de qué color es tu bombacha/calzón."
+    "Chupón en el cuello al de la derecha.", "Sacate una prenda, hace calor acá.", "¿Posición favorita y por qué? Contá.", "Baile sensual a quien elijas.", "¿Trío? ¿Lo hiciste o te re va?",
+    "Que te peguen un chirlo fuerte en la cola.", "¿Qué ropa interior tenés? Mostrá el elástico.", "Mordele el labio al de la izquierda despacio.", "¿Dónde fue el polvo más loco? Contá.", "Chupale una banana/botella mirando a alguien.",
+    "¿Garchaste en el laburo? Detalles.", "Que te escriban algo hot en la panza con fibra.", "¿A quién de acá le das sin pensarlo?", "Pasale comida boca a boca a alguien.", "Gemí el nombre de alguien de la ronda re fuerte.",
+    "¿Qué preferís: tamaño o técnica? Defendelo.", "Susurrale algo re sucio al oído a alguien.", "¿Te chorearon pajeándote? Contá.", "Masaje sensual de hombros 2 min a alguien.", "¿Te filmaste cogiendo? ¿Lo guardás o borraste?",
+    "Tomate un shot del ombligo de quien quieras.", "Contá tu fetiche más turbio sin vergüenza.", "Chapate a alguien de acá, elegí vos.", "¿Cuánto pagarías por un trío con famosos?", "Metele la mano abajo de la remera a alguien.",
+    "¿Le metiste a alguien que está acá? Confiesa.", "¿Escupís o tragás? Justificá tu respuesta.", "Sentate a upa de alguien hasta que te toque.", "¿Usás juguetes? ¿Cuál es tu favorito?", "Describí tu mejor garche en detalle.",
+    "Metete hielo en el pantalón/escote 30 seg.", "¿Cuerneaste? Si sí, tomá y contá por qué.", "Cambiá remera con alguien, sin sacártela antes.", "¿Qué te calienta más: dominante o sumiso?", "Beso esquimal mirándose a los ojos 30 seg.",
+    "¿Mandaste nudes últimamente? A quién.", "Gemí re fuerte como si estuvieras cogiendo.", "¿Le tenés ganas al novio/novia de alguien acá?", "Dale un lengüetazo lento en el cuello a alguien.", "¿Alguna vez dudaste de tu sexualidad? Por quién.",
+    "Que te besen donde se les cante (vos elegís quién).", "¿Probaste sexo anal? ¿Te gustó o nunca más?", "Adiviná qué ropa interior tiene el de enfrente.", "Si andás sin bombacha/bóxer, fondo doble.", "¿Preferís estar arriba o abajo? ¿Por qué?",
+    "Perreale a alguien contra la pared 20 seg.", "¿Garchás con luz o a oscuras? Razones.", "¿Sos de hacerlo a la mañana o de noche?", "Decí qué parte del cuerpo te gusta más del de al lado.", "Chapá a alguien sin lengua, solo labios.",
+    "Mostrá tu foto más caliente (tapá lo que quieras).", "¿Qué fantasía sexual te re gustaría cumplir?", "Mordele/Chupale la oreja a alguien.", "Chupale el dedo a alguien mirándolo a los ojos.", "Que te huelan el cuello y digan si les gusta.",
+    "¿Te lo/la comiste en la primera cita? Siempre lo hacés.", "¿Garchaste en un lugar público? Dónde fue.", "Beso triple con otros dos, a ver cómo sale.", "Si te comiste más de 10, tomá sin culpa.", "De qué color es tu ropa interior hoy.",
+    // NUEVAS PICANTES PERO GRACIOSAS
+    "¿Gemís fuerte o sos silencioso? Demostrá.", "¿Te gusta el dirty talk? Decí un ejemplo acá.", "¿Chupaste en lugares turbios? Contá.", "¿Cuánto te dura? Seamos sinceros.", "¿Te gusta que te tironeen el pelo? Dejá que te lo hagan.",
+    "Contá tu mejor anécdota sexual en 30 segundos.", "¿Qué tan freaky sos del 1 al 10? Justificá.", "¿Te gusta morder o que te muerdan?", "¿Sexo romántico o salvaje? No podés elegir los dos.", "Rankeá a 3 personas de acá: ¿a quién le das?"
   ][i] || `Reto Caliente ${i}`
 }));
 
@@ -144,17 +147,19 @@ const NEVER_DIRTY_STRINGS = [
 ];
 
 const NEVER_GROSS_STRINGS = [
-    "Usé el mismo calzoncillo varios días.", "Meé en la pileta.", "Olí mi propia ropa sucia.", "Vomité y seguí escabiando.", "Comí algo vencido.", "No me bañé por varios días.", "Usé el cepillo de dientes de otro.",
-    "Dejé el inodoro sin tirar la cadena.", "Tuve un moco colgando sin darme cuenta.", "Meé en la ducha.", "Tuve piojos de grande.", "Tuve hongos en las patas.", "Me olí después de rascarme.", "Saqué un pelo de la comida y seguí.",
-    "Me corté las uñas y las dejé ahí.", "Compartí chicle.", "Eructé en la cara de alguien.", "Tuve aliento a dragón.", "Tuve olor a chivo.", "Le reventé un grano a otro.", "Anduve descalzo en baño público.", "Me comí la cascarita.", "Probé la comida y la devolví.",
-    "Me tiré un pedo en público y disimulé.", "Meé en una botella (de emergencia).", "Tengo hongos en la uña.", "Me saqué cera del oído con algo.", "Me rasqué en público.", "Encontré un bicho en la comida y seguí.", "Usé ropa interior rota.", "Me lavé el pelo con jabón común.", "Tengo caspa.",
-    "Me depilé y se me encarnó todo.", "Tengo mal aliento a la mañana.", "No me lavé las manos alguna vez.", "Me saqué comida de los dientes.", "Me exploté un grano.", "Tengo callos en los pies.", "Tengo pelos en la nariz.", "Tengo sarro en los dientes.",
-    // NUEVAS PREGUNTAS GROSS MÁS GRACIOSAS
-    "Me tiré un pedo en el ascensor.", "Escupí en la calle.", "Me soné sin pañuelo.", "Tengo olor a sobaco a veces.", "Me rascé en público.", "Usé las mismas medias dos días.", "Me chupé el dedo después de comer.",
-    "Me salió un granito raro.", "Eructé fuerte sin querer.", "Me comí las uñas.", "Escarbé la nariz sin que me vean.", "Me pica el culo.", "Tengo mal olor de pies.", "No me lavo los dientes antes de dormir a veces.",
-    "Tengo pelos en lugares raros.", "Me sangró la nariz.", "Me salió una ampolla.", "Me saqué una costra.", "Me rasco la cabeza.", "Tengo acné en la espalda.", "Se me cayó comida y la comí igual.",
-    "Tuve el pelo grasoso varios días.", "No me afeité/depiledepilé en meses.", "Usé la misma toalla mucho tiempo.", "Tengo manchas en la ropa.", "No cambié las sábanas en semanas.", "Dejé ropa sucia tirada.", "Comí en la cama.", "Tomé algo vencido por un día.",
-    "Olí si la ropa estaba limpia.", "Me puse la misma ropa del día anterior.", "No me lavé después de hacer ejercicio.", "Tuve mocos secos.", "Me salieron granos por la espalda.", "Tengo olor raro en los pies.", "No me corté las uñas en mucho tiempo.", "Tuve mal aliento todo el día."
+    "Usé el mismo calzoncillo/bombacha 3+ días seguidos.", "Meé en la pileta (o en el mar cerca de gente).", "Olí mi ropa a ver si zafaba otro día más.", "Vomité y seguí chupando como campeón.", "Comí algo re vencido y zafé.", "No me bañé por 4+ días (y salí igual).", "Usé el cepillo de dientes de otro sin decir nada.",
+    "Dejé el inodoro sin tirar la cadena en lo de otro.", "Tuve un moco colgando en público sin darme cuenta.", "Meé en la ducha (siempre o seguido).", "Tuve piojos de grande y me dio re vergüenza.", "Tuve hongos en las patas y anduve descalzo igual.", "Me rasqué el culo/bolas y me olí la mano.", "Saqué un pelo de la comida y seguí comiendo tranqui.",
+    "Me corté las uñas y las dejé tiradas (en cualquier lado).", "Compartí chicle mascado con alguien.", "Eructé en la cara de alguien (queriendo o sin querer).", "Tuve aliento a culo de mono toda la mañana.", "Tuve olor a chivo fuerte y no me di cuenta.", "Le reventé un grano a alguien (y me gustó).", "Anduve en patas en baño público asqueroso.", "Me comí la cascarita de una herida.", "Probé comida de otro plato y la devolví ahí.",
+    "Me tiré un pedo en el ascensor/bondi y me hice el gil.", "Meé en una botella manejando o de noche.", "Tengo hongos en las uñas hace tiempo.", "Me saqué cera del oído con lo primero que encontré.", "Me rasqué las bolas/concha en público disimulando.", "Encontré un bicho en la comida y lo saqué nomás.", "Usé ropa interior re rota (con agujeros gigantes).", "Me lavé el pelo con jabón para las manos.", "Tengo caspa y se me ve en la ropa.",
+    "Me depilé y se me encarnó todo (tengo pelos bajo la piel).", "Tengo aliento a perro muerto a la mañana.", "No me lavé las manos después de cagar.", "Me saqué comida de los dientes y me la comí.", "Me exploté un grano y salió banda de pus.", "Tengo callos re feos en los pies.", "Tengo pelos en la nariz que se ven.", "Tengo sarro en los dientes de no ir al dentista.",
+    // NUEVAS PREGUNTAS RANCIAS PERO GRACIOSAS - MÁS TURBIAS
+    "Me tiré un pedo y salió con sorpresa (me cagué un poquito).", "Escupí en la calle como viejo maleducado.", "Me soné los mocos con la mano y los tiré al piso.", "Tengo olor a sobaco que tumba gente.", "Me rascé la entrepierna en público sin disimular.", "Usé las mismas medias una semana.", "Me chupé el dedo después de rascar algo asqueroso.",
+    "Me salió un grano en el culo y me lo reventé.", "Eructé después de tomar y salió con gusto.", "Me comí las uñas hasta hacerme sangre.", "Escarbé la nariz y me lo comí (cuando era chico o ahora).", "Me pica el culo seguido en público.", "Tengo olor a pata que mata moscas.", "Me fui a dormir sin lavarme los dientes (siempre).",
+    "Tengo pelos en lugares que no debería tener.", "Me sangró la nariz y me la tragué.", "Me salió una ampolla y me la reventé con los dientes.", "Me saqué una costra y la olí.", "Me rasco la cabeza y me huelo los dedos.", "Tengo acné en la espalda y me lo exploto.", "Se me cayó comida al piso y la comí (regla de los 5 segundos).",
+    "Tuve el pelo re grasoso y me puse gorra nomás.", "No me afeité las axilas/huevos en meses.", "Usé la misma toalla asquerosa por meses.", "Tengo manchas de transpiración amarillas en la ropa.", "No cambié las sábanas en más de un mes.", "Dejé ropa interior sucia tirada por todos lados.", "Comí milanesas frías arriba de la cama.", "Tomé leche/yogur vencido y no pasó nada.",
+    "Olí la ropa interior a ver si zafaba.", "Me puse la misma remera chivada del día anterior.", "No me bañé después de hacer ejercicio (y salí así).", "Tuve mocos secos colgando de la nariz.", "Me salieron granos en la cola.", "Mis pies largan olor a queso podrido.", "No me corté las uñas en meses (parezco garra).", "Tuve mal aliento todo el día y ninguno me dijo.",
+    // MÁS TURBINAS ARGENTAS
+    "Me limpié el culo con papel mojado/diario.", "Dejé el sorete flotando en el baño de otro.", "Me tiré pedos todo el día sin parar.", "Tuve diarrea explosiva en público.", "Me salió pus de una herida y la dejé así.", "Tengo mugre en el ombligo que huele mal.", "Me saqué un moco gigante y lo pegué abajo de algo.", "Tuve hipo y eructo al mismo tiempo."
 ];
 
 const NEVER_COUPLES_STRINGS = [
